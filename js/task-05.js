@@ -4,8 +4,9 @@ const outputName = document.querySelector('span[id="name-output"]');
 textInput.addEventListener("input", outputCurrentText);
 
 function outputCurrentText(evt) {
-	outputName.textContent = evt.currentTarget.value.trim();
-	if (!evt.currentTarget.value) {
+	const inputText = evt.currentTarget.value.trim();
+	outputName.textContent = inputText;
+	if (!inputText) {
 		outputName.textContent = "Anonymous";
 	};
 }
