@@ -1,9 +1,9 @@
 const validation = document.querySelector('input[id="validation-input"]');
 const validationLength = Number(validation.attributes['data-length'].nodeValue);
 
-validation.addEventListener("blur", validatingData);
+validation.addEventListener("blur", validateData);
 
-function validatingData(evt) {
+function validateData(evt) {
 	if (evt.currentTarget.value.length >= validationLength) {
 		validation.classList.remove('invalid');
 		validation.classList.add("valid");
