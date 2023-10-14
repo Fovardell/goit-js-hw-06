@@ -8,9 +8,8 @@ function submitData(evt) {
 	const userData = { email, password };
 	evt.preventDefault();
 
-	if (!email && !password) {
-		alert("Будь ласка, заповність всі поля!");
-		return;
+	if (!email || !password) {
+		return alert("Будь ласка, заповність всі поля!");
 	}
 
 	console.log(userData);
